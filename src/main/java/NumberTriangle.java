@@ -89,11 +89,10 @@ public class NumberTriangle {
      */
     public int retrieve(String path) {
         NumberTriangle curr = this;
-        for (int i = 0; i < path.length(); i++) {
-            char ch = path.charAt(i);
-            if (ch == 'l') {
+        for (char c : path.toCharArray()) {
+            if (c == 'l') {
                 curr = curr.left;
-            } else if (ch == 'r') {
+            } else if (c == 'r') {
                 curr = curr.right;
             }
         }
